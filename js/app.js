@@ -2,7 +2,7 @@
 function updateExtraCost(clickedIteam,priceAdded){
     const updatePrice = document.getElementById(clickedIteam);
     updatePrice.innerText = priceAdded;
-    calculateTotal('total-cost', 'all-total')
+    calculateTotal('total-cost', 'all-total');
 };
 
 // function to update total cost
@@ -31,6 +31,9 @@ function couponCheck(couponCode,allTotal){
     if(getCouponCode == couponCode){
         let discountedPrice = (getSubTotal * 20) / 100;
         document.getElementById(allTotal).innerText = getSubTotal - discountedPrice;
+    }
+    else{
+        calculateTotal('total-cost', 'all-total');
     }
 }
 
