@@ -1,0 +1,74 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/* coustom css for custom button */
+.my-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    margin:2px 3px !important;
+    font-size: 18px;
+    padding: 5px 8px;  
+}
+.my-btn:hover,.my-btn:focus{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #000;
+    border: 1px solid rgb(83, 83, 83);
+    border-radius: 6px;
+    margin:2px 3px !important;
+    padding: 5px 8px;
+    transition: all 0.5s;  
+}
+
+/* padding for table */
+.ps-end{
+    padding-left:250px !important;
+}
+   
+.search-wrapper{
+    width: 420px;
+    position: relative;
+}   
+.search-wrapper input{
+    width: 420px;
+    height: 50px;
+    padding:5px 12px;
+    border-radius: 35px;
+    outline: 0;
+    border:1px solid rgb(182, 177, 177);
+    position: relative;
+}
+.search-wrapper input:focus{
+    width: 420px;
+    height: 50px;
+    outline: 0;
+    border:1px solid rgb(0, 0, 0);
+    padding:5px 12px;
+    border-radius: 35px;
+}
+.search-wrapper button{
+    width: 150px;
+    height: 40px;
+    padding:5px 3px;
+    /* text-align: middle; */
+    border-radius: 35px;
+    outline: 0;
+    border:1px solid rgb(182, 177, 177);
+    position: absolute;
+    right: 5px;
+    top:50%;
+    transform: translateY(-50%);
+    background-color: #DC3545;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.search-wrapper button:hover,.search-wrapper button:focus{
+    background-color: #198754;
+}
