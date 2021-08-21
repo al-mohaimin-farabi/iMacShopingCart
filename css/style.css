@@ -1,6 +1,7 @@
 *{
     margin:0px;
     padding:0px;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 /* coustom css for custom button */
@@ -31,7 +32,9 @@
 .ps-end{
     padding-left:250px !important;
 }
-   
+.cs-margin{
+    margin-top: -15px !important;
+}
 .search-wrapper{
     width: 420px;
     position: relative;
