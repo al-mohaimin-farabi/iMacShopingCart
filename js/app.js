@@ -37,7 +37,8 @@ function couponCheck(couponCode,allTotal,couponValidation){
 
     else if (getCouponCode != couponCode && couponValidation == false){
         alert("This Coupon Code Is not valid");
-        document.getElementById(allTotal).innerText = getSubTotal;
+        // document.getElementById(allTotal).innerText = getSubTotal;
+        calculateTotal('total-cost', 'all-total');
     }
 
     else{
