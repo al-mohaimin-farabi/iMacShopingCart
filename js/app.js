@@ -21,17 +21,24 @@ function calculateTotal(subtotal, allTotal){
     // update on the html
     document.getElementById(subtotal).innerText = 1299 + subTotal;
     let TotalCost = document.getElementById(allTotal).innerText = 1299 + subTotal;
-    return TotalCost; 
+    // return TotalCost; 
 };
 
 // function for coupon checker
-function couponCheck(couponCode,allTotal){
+function couponCheck(couponCode,allTotal,couponValidation){
     const getCouponCode = document.getElementById('inputed-code').value;
     let getSubTotal = document.getElementById('total-cost').innerText;
+
     if(getCouponCode == couponCode){
-        let discountedPrice = (getSubTotal * 20) / 100;
-        document.getElementById(allTotal).innerText = getSubTotal - discountedPrice;
+        let calcdiscountedAmount = (getSubTotal * 20) / 100;
+        let totalPrice = Math.round(getSubTotal - calcdiscountedAmount)
+        document.getElementById(allTotal).innerText = totalPrice;
     }
+
+    else if (getCouponCode != couponCode && couponValidation == false){
+        alert("This Coupon Code Is not valid")
+    }
+
     else{
         calculateTotal('total-cost', 'all-total');
     }
@@ -68,6 +75,6 @@ document.getElementById('fast-Delivery').addEventListener('click',function(){
     couponCheck('stevekaku','all-total')
 });
 document.getElementById('coupon-check').addEventListener('click',function(){
-    couponCheck('stevekaku','all-total');
+    couponCheck('stevekaku','all-total',false);
 });
 
