@@ -26,19 +26,21 @@ function calculateTotal(subtotal, allTotal){
 
 // function for coupon checker
 function couponCheck(couponCode,allTotal,couponValidation){
-    const getCouponCode = document.getElementById('inputed-code').value;
+    let getCouponCode = document.getElementById('inputed-code').value;
     let getSubTotal = document.getElementById('total-cost').innerText;
 
     if(getCouponCode == couponCode){
         let calcdiscountedAmount = (getSubTotal * 20) / 100;
         let totalPrice = Math.round(getSubTotal - calcdiscountedAmount)
         document.getElementById(allTotal).innerText = totalPrice;
+        // getCouponCode = ' ';
     }
 
     else if (getCouponCode != couponCode && couponValidation == false){
         alert("This Coupon Code Is not valid");
         // document.getElementById(allTotal).innerText = getSubTotal;
         calculateTotal('total-cost', 'all-total');
+
     }
 
     else{
